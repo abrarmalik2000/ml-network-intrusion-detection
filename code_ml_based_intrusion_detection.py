@@ -33,8 +33,7 @@ clf = setup(data=training_data, target= 'label')
 #list of models to iterate through for calculations 
 models = ['lr', 'ridge', 'lda','rf','nb', 'gbc','ada','et','qda','knn','dt','svm','mlp'] 
 
-#catboost & xgboost are not available, gpc & rbfsvm are excluded as they are very slow
-# lightgbm has alot of warning messages and it is excluded 
+#gpc & rbfsvm are excluded due to high processing time
 
 #test model list 
 #models = ['lr']
@@ -56,19 +55,18 @@ for model in models:
     m = create_model(model) # create the models 
     predictions = predict_model(m, data=testing_data) # predict the models for accuracy 
     
-    #plots running together are stuck; can only run one by one   
-    
+    #plots     
     #plot_model(m, plot='confusion_matrix') #plot confusion matrix 
-    #plot_model(m, plot='auc') #plot area under curver 
+    #plot_model(m, plot='auc') #plot area under curve
     #plot_model(m, plot='feature') #plot feature 
-    #model 'nb','qda','knn' & 'mlp' are not supported for feature 
+
     
     #take out model summary to store in json 
     model_summary= pull()
     results[model] = model_summary.to_dict(orient='records') #store results in dictionary 
 
 
-# keras neural network 
+# add keras neural network analysis
 print("calculating keras ...")
 
 from tensorflow import keras
