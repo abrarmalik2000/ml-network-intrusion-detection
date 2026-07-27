@@ -62,14 +62,23 @@ for Cyber Security (ACSC).
 A clear pattern has emerged after the analysis of model features, confusion matrix and accuracy. The top three features identified for the dataset with the highest accuracy models are transaction protocols, same source and destination IPs, and packet time to live. These three features can be used to detect cyber-attacks in the network using the highest accuracy models. Random forest, gradient boosting and extra trees are the top three models observed based on accuracy.
 
 ## Results for most relevant models
+
 **Random Forrest** 
+
 <img width="800" height="549" alt="RandomForrest_ConfusionMatrix" src="https://github.com/user-attachments/assets/30c30b5f-dbd0-482d-b121-edd76f875e2e" />
+
 <img width="800" height="500" alt="rf_feature" src="https://github.com/user-attachments/assets/c22cdd39-253d-433f-b28f-c07b29ed8e46" />
+
 **Gradient Boost** 
+
 <img width="800" height="549" alt="GradientBoostingClassifier_ConfusionMatrix" src="https://github.com/user-attachments/assets/c3c2ddc1-4e8c-46d3-8426-1bde76e1e113" />
+
 <img width="800" height="500" alt="gbc_feature" src="https://github.com/user-attachments/assets/29102724-ad5b-453f-b06f-cb50f060f607" />
+
 **Extra Trees**
+
 <img width="800" height="549" alt="ExtraTrees_ConfusionMatrix" src="https://github.com/user-attachments/assets/2a5a628f-a8b3-4763-9462-33da6a34e845" />
+
 <img width="800" height="500" alt="et_feature" src="https://github.com/user-attachments/assets/377582ea-720c-41b0-9755-622b52f470e1" />
 
 ## Tech Stack
